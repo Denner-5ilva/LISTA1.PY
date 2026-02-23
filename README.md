@@ -77,8 +77,7 @@ def questao_7():
 def questao_8():
     num1 = int(input("Digite o 1º número: "))
     num2 = int(input("Digite o 2º número: "))
-
-    print (f"\nSubtração de {num1} e {num2}: {num1 - num2}")
+    print (f"\Subtração de {num1} e {num2}: {num1 - num2}")
 
 # questao_8()
 
@@ -86,7 +85,6 @@ def questao_8():
 
 def questao_9():
     num = float(input("Digite um número real: "))
-    
     print (f"1/4 do número {num}: {num/4}")
 
 # questao_9()
@@ -98,11 +96,9 @@ def questao_10():
     num1 = float(input("Digite o 1º número real: "))
     num2 = float(input("Digite o 2º número real: "))
     num3 = float(input("Digite o 3º número real: "))
-
-    soma = num1 + num2 + num3
-    media = soma/3
-
-    print(f"\nMédia aritmética dos números {num1}, {num2}, {num3}: {media:.2f}")
+    media = (num1 + num2 + num3) / 3
+    print(f"\Média de {num1}, {num2}, {num3}: é igual a {media:.2f}")
+    
 
 # questao_10()
 
@@ -112,11 +108,10 @@ def questao_10():
 def questao_11():
     num1 = float(input("Digite o 1º número real: "))
     num2 = float(input("Digite o 2º número real: "))
-
-    print (f"\nAdição: {num1 + num2"}
-    print (f"Subtração: {num1 - num2}")
-    print (f"Multiplicação: {num1 * num2}")
-    print (f"Divisão: {num1 / num2:.2f}")
+    print (f"\{num1 + num2"}={num1+num2}")
+    print (f"\{num1 - num2"}={num1-num2}")
+    print (f"\{num1 * num2"}={num1*num2}")
+    print (f"\{num1 / num2"}={num1/num2}")
 
 # questao_11()
 
@@ -124,18 +119,16 @@ def questao_11():
 
 def questao_12():
     num = float(input("Digite um número real: "))
-
-    print(f"\nQuadrado do valor {num}: {num*num}")
+    print(f"\o quadrado de {num:.2f}: {num*num}")
 
 # questao_12()
 
 # 13. Faça um programa que leia o saldo de uma conta poupança e imprima o novo saldo, considerando um reajuste de 2%.
 
 def questao_13():
-    saldo = float(input("Informe o saldo da conta poupança: "))
-    novo_saldo = saldo * 1.02
-
-    print(f"\nNovo saldo com reajuste de 2%: {novo_saldo:.2f}")
+    saldo = (float(input("Informe o saldo da conta poupança: R$ "))
+    saldo = round(saldo,2)
+    print(f"saldo de {saldo:.2f} + 2% = R$ {saldo*1.02}")
 
 # questao_13()
 
@@ -144,26 +137,20 @@ def questao_13():
 def questao_14():
     base = float(input("Informe a base do retãngulo: "))
     altura = float(input("Informe a altura do retângulo: "))
-
     perimetro = (base*2 + altura*2)
     area = (base * altura)
-
     print(f"\nPerímetro do retângulo: {perimetro:.2f} m")
     print(f"Área do retângulo: {area:.2f} m²")
-
 # questao_14()
 
 # 15. Faça um programa que leia o valor de um produto, o percentual do desconto desejado e imprima o valor do desconto e o valor do produto subtraindo o desconto.
 
 def questao_15():
-    produto = float(input("Informe o valor do produto: "))
-    percentual = float(input("Informe o percentual do desconto desejado: "))
-
-    desconto = produto * (percentual/100)
-    valor_final = produto - desconto
-
-    print(f"\nValor do desconto: R${desconto:.2f}")
-    print(f"Valor do final do produto: R${valor_final:.2f}")
+    valor = round(float(input("valor do produto: R$")), 2)
+    desconto_desejado = float(input("% do desconto desejado:"))
+    valor_desconto = valor*desconto_desejado/100
+    print(f"valor do desconto:R$ {valor_desconto:;2f}")
+    print(f"valor final do produto: R$ {valor-valor_desconto}")
 
 # questao_15()
 
@@ -173,7 +160,6 @@ def questao_15():
 def questao_16():
     salario_atual = float(input("Informe o salário atual: "))
     percentual_reajuste = float(input("Informe o percentual de reajuste: "))
-
     novo_salario = salario_atual + (salario_atual * (percentual_reajuste/100))
     print(f"\nNovo salário com o reajuste: R${novo_salario:.2f}")
 
@@ -187,7 +173,6 @@ def questao_16():
 def questao_17():
     centigrados = float(input("Informe a temperatura em graus centígrados: "))
     fahrenheit = (9 * centigrados + 160) / 5
-
     print(f"\nConversão de graus centígrados para Fahrenheit: {fahrenheit:.2f} °F")
 
 # questao_17()
@@ -208,10 +193,8 @@ def questao_17():
 def questao_18():
     t = float(input("Informe o tempo decorrido na viagem: "))
     v = float(input("Informe a velocidade média: "))
-
     d = t * v
     l = d / 12
-
     print(f"\nDistância percorrida na viagem: {d} m")
     print(f"Quantidade de litros consumidos na viagem: {l:.2f} l")
 
@@ -227,10 +210,8 @@ def questao_19():
     prestacao_vencida = float(input("Informe o valor da prestação em atraso: "))
     taxa_periodica_juros = float(input("Informe a taxa periódica de juros: "))
     periodo_atraso = float(input("Informe o período de atraso: "))
-
     juros = prestacao_vencida * (taxa_periodica_juros/100) * periodo_atraso
     valor_final = prestacao_vencida + juros
-
     print(f"\nValor da prestação atrasada: R${prestacao_vencida:.2f}")
     print(f"Período de atraso: {periodo_atraso}")
     print(f"Juros cobrados: R${juros:.2f}")
@@ -244,7 +225,10 @@ def questao_19():
 def questao_20():
     dolar = float(input("Informe o valor em dólar (US$): "))
     real = dolar * 5.20
-
     print(f"\nDólar (US$) convertido para real (R$): R${real:.2f}")
 
 # questao_20()
+
+
+questao = input("digite a questao a ser executada:")
+eval(f"q{questao}()")       #eval tranforma uma string (texto) em comando python
